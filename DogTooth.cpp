@@ -12,7 +12,7 @@ vector<string> inventory;
 
 void logo();
 void Inventory();
-void intro();
+void ServerSwitch();
 
 int main() {
 
@@ -26,7 +26,150 @@ int main() {
 
 
 	//logo();
-	intro();
+
+	cout << "Thank you for playing DogTooth" << endl;
+	cout << "###############################" << endl;
+
+	cout << "Learn how to play? (y/n)" << endl;
+
+	getline(cin, input);
+
+	if (input == "y") {
+		system("CLS");
+		cout << "Thank you for playing DogTooth" << endl;
+		cout << "###############################" << endl;
+		cout << "HOW TO PLAY" << endl;
+		cout << endl;
+		cout << "Commands use Capitalization for the action and subject" << endl;
+		cout << "EX: player inputs 'Go east' but nothing happens becuse it needs to be spelled 'Go East'" << endl;
+		cout << endl;
+		cout << "Anything thats Capitalized means you can use it in the command" << endl;
+		cout << "EX: 'If you can get a closer look, you can find out whats in the Ashes." << endl;
+		cout << "Play inputs 'Look at Ashes'" << endl;
+		cout << "The player will get details of the ashes" << endl;
+		system("pause");
+		cout << "Your input and related console reponces will be displayed at the top of each turn" << endl;
+		system("CLS");
+	}
+	else {}
+
+	system("color A");
+	cout << "Your name is Cyd Campbell, " << endl;
+	cout << "You work with an agency called 'Rise'" << endl;
+	cout << "Rise has established multiple bases from your home town in Ohio to the edges of space, they're working on the many dimensions" << endl;
+	cout << "You like to keep to your self and avoid contact with anyone outside of Rise...You have to be in the know to know, you know?" << endl;
+	cout << "And theres absolutly nothing wrong with that...I guess." << endl;
+	cout << "Your spot Rise is usally a 24/7 full time position" << endl;
+	cout << "They give you missions and tasks to complete and send you money the next day through a third party " << endl;
+	cout << "Though you dont have a concreate idea about what and who the organization you work with is" << endl;
+	cout << "You never questioned it, and its never been a problem with you becuse you trust them and it pays the bills " << endl;
+	cout << "Today is your birthday, and every one gets a chance at one higher ranked mission on such 'special occations'" << endl;
+	cout << "Right now, youre waiting for your associate to contact you with the info for yout task " << endl;
+	cout << endl;
+	system("pause");
+	Beep(300, 300);
+	Beep(500, 200);
+	Beep(300, 200);
+	Sleep(900);
+	cout << endl;
+	cout << "That must be them" << endl;
+	cout << endl;
+	system("pause");
+	system("CLS");
+	system("color E");
+	cout << "---INCOMING TRANSMISTION---" << endl;//motive
+	Sleep(3800);//gives real life instant messanger feel
+	cout << "Hey Cyd- I have a mission for the day," << endl;
+	cout << "I need you to check out a warning signal coming from one of our transdemantional space station" << endl;
+	Sleep(3800);
+	cout << "The Staion is a multi-floor residencial office that serves base for our ''Supernatrual Prevaors'' branch" << endl;
+	Sleep(3800);
+	cout << "We havent heard back from them in...a while..." << endl;
+	Sleep(3000);
+	cout << "All I can find out is that theres was recent funding for investicatrions in something called - 'Veil'" << endl;
+	Sleep(3900);
+	cout << "I was able to get my hand on some more info about it but, its not alot as comunication has been termanated for the time being, Ill send you the file" << endl;
+	Sleep(3800);
+	cout << "Someone will be by to take you to the site" << endl;
+	Sleep(3800);
+	cout << "report back to ME, if you find anything...This is TOP PRIORITY" << endl;
+	cout << endl;
+	Sleep(3000);
+	cout << "---END OF TRANSMISTION---" << endl;
+	cout << "1 attached file" << endl;
+	system("pause");
+	system("CLS");
+
+	system("color F");
+
+	cout << "Would you like to open the file? (y/n)" << endl;
+
+	getline(cin, input);
+
+	if (input == "y") {
+		system("CLS");
+		cout << "###Property of the RISE coprpration###" << endl;
+		cout << endl;
+		for (int i = 0; i < 3; i++) { //Redacted Paragraph
+			for (int i = 0; i <= 6; i++) {
+				cout << " ";
+				int numb = rand() % 5 + 1;
+
+				for (int i = 0; i < numb; i++)
+					cout << char(254);
+			}
+			cout << endl;
+		}
+
+		cout << "Gavin " << char(254) << char(254) << char(254) << char(254) << char(254) << char(254) << char(254) << char(254) << char(254) << " is the head director of the Viel project, He has teamed up with " << endl;
+		cout << "Gavin was made aware of the veil after using alchemy make the 'Crimson Divanation'" << endl;
+		cout << "The divination stated 'The one to rise will cast out the fallen'" << endl;
+
+		for (int i = 0; i < 3; i++) { //Redacted Paragraph
+			for (int i = 0; i <= 7; i++) {
+				cout << " ";
+				int numb = rand() % 5 + 1;
+
+
+				for (int i = 0; i < numb; i++)
+					cout << char(254);
+			}
+		}
+		cout << endl;
+		cout << "The black viel shal be pierced and torn from this realm, and no longer have the power to imprison to this mortal plane" << endl;
+		cout << endl;
+		cout << endl;
+		cout << "Gavin will partner up with the Supernatral provaours and use the mars orbit base as an office to be complety focused on research" << endl;
+		cout << endl;
+		cout << "The following is a transcript of the recent reserch on 'Viel'" << endl;
+		cout << "10/23/XX23" << endl;
+		cout << endl;
+		cout << "The SP accociates helped me run an expiriment in which we used a house pet and and an alchemic formula to try and regenerate some of the missing tissue" << endl;
+		for (int i = 0; i < 3; i++) { //Redacted Paragraph
+			for (int i = 0; i <= 9; i++) {
+				cout << " ";
+				int numb = rand() % 5 + 1;
+
+
+				for (int i = 0; i < numb; i++)
+					cout << char(254);
+			}
+			cout << endl;
+		}
+
+	}
+
+
+
+	Sleep(350);
+	cout << endl;
+	system("pause");
+	system("CLS");
+	cout << "Today marks your first day on the space mission" << endl;
+	cout << "The sensors say that the 3rd level of the office is the most stable for climbing aboard" << endl;
+	cout << "You can easily go through the emegancy excape pod chamber but you have to leave your main ship behind" << endl;
+	cout << "So much for your ride back home..." << endl;
+	system("pause");//stranded
 
 
 	do { //-------------Game Loop -----------------
@@ -65,9 +208,9 @@ int main() {
 			else if (input == "Go East")
 				room = 2;
 			else
-				cout << "You WHAT?" << endl;
+				input = "You WHAT?";
 			break;
-			
+
 		case 2: //Kitchen
 			system("CLS");
 			cout << ">" << input << endl;
@@ -92,7 +235,7 @@ int main() {
 			else if (input == "Go North")
 				room = 3;
 			else {
-				cout << "Im not sure you can go that way" << endl;
+				input = "Im not sure you can go that way";
 			}
 			break;
 
@@ -121,16 +264,14 @@ int main() {
 			}
 
 			if (input == "Inventory") {
-				system("CLS");
 				Inventory();
-				system("pause");
 			}
 			if (input == "Go West")
 				room = 4;
 			if (input == "Go South")
 				room = 2;
 			else
-				cout << "But nobody came..." << endl;
+				input = "But nobody came...";
 			break;
 
 		case 4: //Bedroom
@@ -157,7 +298,8 @@ int main() {
 					input = "Doesnt look like you have a key to open the door";
 				}
 			}
-			if (input == "Invt" || "Inventory")
+
+			if (input == "Inventory")
 				Inventory();
 			else
 				input = "Error - 404";
@@ -201,10 +343,10 @@ int main() {
 			}
 			if (input == "Go East")
 				cout << "The door wont budge, not good" << endl;
-			if (input == "Invt" || "Inventory")
+			if (input =="Inventory")
 				Inventory();
 			else
-				cout << "Yea, NO... " << endl;
+				input = "Yea, NO... ";
 			break;
 
 
@@ -230,19 +372,20 @@ int main() {
 			getline(cin, input);
 
 			if (input == "Look at Floor") {
-				system("CLS");
 				cout << "You kneel down and use your hands to dig through the ash" << endl;
 				cout << "You pick one of the small hard pieces and shine your flashlight on it" << endl;
-				cout << "TEETH" << endl;
+				cout << "IT'S A TOOTH" << endl;
+				input = "You took a couple of teeth";
+				inventory.insert(inventory.begin(), "Teeth");
 			}
-			else if (input == "Invt" || "Inventory")
+			if (input =="Inventory")
 				Inventory();
-			else if (input == "Go South")
+			if (input == "Go South")
 				room = 3;
-			else if (input == "Go Up")
+			if (input == "Go Up")
 				room = 5;
 			else
-				cout << "Error - 404" << endl;
+				input = "Error - 404";
 			break;
 
 
@@ -254,6 +397,19 @@ int main() {
 			cout << "The room is VERY empty" << endl;
 			cout << "Theres an exit in every direction" << endl;
 
+			getline(cin, input);
+
+			if (input =="Inventory")
+				Inventory();
+			if (input == "Go South")
+				room = 52;
+			if (input == "Go North")
+				room = 11;
+			if (input == "Go West")
+				room = 8;
+			if (input == "Go East")
+				room = 9;
+
 			break;
 		case 7://server room
 			//system("CLS");
@@ -261,9 +417,48 @@ int main() {
 			cout << "The room is in better condition than the ones you've seen" << endl;
 			cout << "Theres two large shelfs and a desk against the wall in between the two" << endl;
 			cout << "Colurful wires and lights are flashing everywere" << endl;
-			cout << "Theres a yellow Switch coming out of one of the shelves behind the desk " << endl;
+			cout << "Theres a yellow Switch you can Use coming out of one of the shelves behind the desk " << endl;
 
 			cout << "A doorway South of you leads back to the cubicals " << endl;
+
+			getline(cin, input);
+
+			if (input == "Use Switch") {
+				if (serverSwitch == 2) {
+					cout << "Move the switch Up or Down?" << endl;
+
+					getline(cin, input);
+
+					if (input == "Up")
+						serverSwitch = 1;
+					else if (input == "Down")
+						serverSwitch = 3;
+				}
+				else if (serverSwitch == 1) {
+					cout << "You move the switch down" << endl;
+
+					serverSwitch = 2;
+				}
+				else {
+					cout << "You move the switch Up" << endl;
+
+					serverSwitch = 2;
+					
+				}
+			}
+				else if (serverSwitch == 1)
+					room = 14;
+				else
+					room = 15;
+			
+
+			if (input == "Inventory")
+				Inventory();
+			if (input == "Go South")
+				room = 9;
+			else
+				input = "Im not playing these games";
+
 
 			break;
 
@@ -276,6 +471,11 @@ int main() {
 
 			cout << "You can leave the room to the East" << endl;
 
+			if (input == "Inventory")
+				Inventory();
+			if (input == "Go East")
+				room = 6;
+
 			break;
 
 		case 9://Office cubicals
@@ -283,29 +483,51 @@ int main() {
 
 			cout << "" << endl;
 
+			if (input == "Go North")
+				room = 7;
+			if (input == "Go East")
+				room = 10;
+			if (input == "Go West")
+				room = 6;
 			break;
 
 		case 10:
 			//system("CLS");
 
+			if (input == "Go West")
+				room = 9;
 
 			break;
 
 		case 11:
 			//system("CLS");
 
+			if (input == "Go Up")
+				room = 112;
+			if (input == "Go South")
+				room = 6;
 
 			break;
 
 		case 112:
 			//system("CLS");
 
+			if (input == "Go South")
+				room = 12;
 
 			break;
 
 		case 12:
 			//system("CLS");
 
+			if (input == "Go South")
+				room = 122;
+			if (input == "Go North")
+				room = 112;
+			if (input == "Go East")
+				room = 18;
+			if (input == "Go South")
+				
 
 			break;
 
@@ -313,6 +535,13 @@ int main() {
 		case 122:
 			//system("CLS");
 
+			if (input == "Go East")
+				if (serverSwitch == 2)
+					room = 13;
+				else if (serverSwitch == 1)
+					room = 14;
+				else
+					room = 15;
 
 			break;
 
@@ -542,154 +771,15 @@ void logo() { //Logo Defined
 }
 
 void Inventory() {
+	system("CLS");
 	cout << "Currenly, you are holding: " << endl;
 	for (int i = 0; i < inventory.size(); i++)
 		cout << "- " << inventory[i] << endl;
+	system("pause");
 }
 
-void intro() {
-	char input = 'f';
-
-	cout << "Thank you for playing DogTooth" << endl;
-	cout << "###############################" << endl;
-
-	cout << "Learn how to play? (y/n)" << endl;
-
-	cin >> input;
-
-	if (input == 'y') {
-		system("CLS");
-		cout << "Thank you for playing DogTooth" << endl;
-		cout << "###############################" << endl;
-		cout << "HOW TO PLAY" << endl;
-		cout << endl;
-		cout << "Commands use Capitalization for the action and subject" << endl;
-		cout << "EX: player inputs 'Go east' but nothing happens becuse it needs to be spelled 'Go East'" << endl;
-		cout << endl;
-		cout << "Anything thats Capitalized means you can use it in the command" << endl;
-		cout << "EX: 'If you can get a closer look, you can find out whats in the Ashes." << endl;
-		cout << "Play inputs 'Look at Ashes'" << endl;
-		cout << "The player will get details of the ashes" << endl;
-		system("pause");
-		cout << "Your input and related console reponces will be displayed at the top of each turn" << endl;
-		system("CLS");
-	}
-	else {}
-
-	system("color A");
-	cout << "Your name is Cyd Campbell, " << endl;
-	cout << "You work with an agency called 'Rise'" << endl;
-	cout << "Rise has established multiple bases from your home town in Ohio to the edges of space, they're working on the many dimensions" << endl;
-	cout << "You like to keep to your self and avoid contact with anyone outside of Rise...You have to be in the know to know, you know?" << endl;
-	cout << "And theres absolutly nothing wrong with that...I guess." << endl;
-	cout << "Your spot Rise is usally a 24/7 full time position" << endl;
-	cout << "They give you missions and tasks to complete and send you money the next day through a third party " << endl;
-	cout << "Though you dont have a concreate idea about what and who the organization you work with is" << endl;
-	cout << "You never questioned it, and its never been a problem with you becuse you trust them and it pays the bills " << endl;
-	cout << "Today is your birthday, and every one gets a chance at one higher ranked mission on such 'special occations'" << endl;
-	cout << "Right now, youre waiting for your associate to contact you with the info for yout task " << endl;
-	cout << endl;
-	system("pause");
-	Beep(300, 300);
-	Beep(500, 200);
-	Beep(300, 200);
-	Sleep(900);
-	cout << endl;
-	cout << "That must be them" << endl;
-	cout << endl;
-	system("pause");
-	system("CLS");
-	system("color E");
-	cout << "---INCOMING TRANSMISTION---" << endl;//motive
-	Sleep(3800);//gives real life instant messanger feel
-	cout << "Hey Cyd- I have a mission for the day," << endl;
-	cout << "I need you to check out a warning signal coming from one of our transdemantional space station" << endl;
-	Sleep(3800);
-	cout << "The Staion is a multi-floor residencial office that serves base for our ''Supernatrual Prevaors'' branch" << endl;
-	Sleep(3800);
-	cout << "We havent heard back from them in...a while..." << endl;
-	Sleep(3000);
-	cout << "All I can find out is that theres was recent funding for investicatrions in something called - 'Veil'" << endl;
-	Sleep(3900);
-	cout << "I was able to get my hand on some more info about it but, its not alot as comunication has been termanated for the time being, Ill send you the file" << endl;
-	Sleep(3800);
-	cout << "Someone will be by to take you to the site" << endl;
-	Sleep(3800);
-	cout << "report back to ME, if you find anything...This is TOP PRIORITY" << endl;
-	cout << endl;
-	Sleep(3000);
-	cout << "---END OF TRANSMISTION---" << endl;
-	cout << "1 attached file" << endl;
-	system("pause");
-	system("CLS");
-
-	system("color F");
-
-	cout << "Would you like to open the file? (y/n)" << endl;
-
-	cin >> input;
-
-	if (input == 'y')
-	{
-		cout << "Property of the RISE coprpration" << endl;
-		cout << endl;
-		for (int i = 0; i < 3; i++) { //Redacted Paragraph
-			for (int i = 0; i <= 10; i++) {
-				cout << " ";
-				int numb = rand() % 5 + 1;
-
-
-				for (int i = 0; i < numb; i++)
-					cout << char(178);
-			}
-			cout << endl;
-		}
-
-		cout << "Gavin" << char(178) << char(178) << char(178) << char(178) << char(178) << char(178) << char(178) << char(178) << char(178) << " is the head director of the Viel project, He has teamed up with " << endl;
-		cout << "Gavin was made aware of the veil after using alchemy make the 'Crimson Divanation'" << endl;
-		cout << "The divination stated 'The one to rise will cast out the fallen'" << endl;
-
-		for (int i = 0; i < 3; i++) { //Redacted Paragraph
-			for (int i = 0; i <= 10; i++) {
-				cout << " ";
-				int numb = rand() % 5 + 1;
-
-
-				for (int i = 0; i < numb; i++)
-					cout << char(178);
-			}
-			cout << endl;
-			cout << "The black viel shal be pierced and torn from this realm, and no longer have the power to imprison to this mortal plane" << endl;
-			cout << endl;
-			cout << endl;
-			cout << "Gavin will partner up with the Supernatral provaours and use the mars orbit base as an office to be complety focused on research" << endl;
-			cout << endl;
-			cout << "The following is a transcript of the recent reserch on 'Viel'" << endl;
-			cout << "10/23/XX23" << endl;
-			cout << "The SP accociates helped me run an expiriment in which we used a house pet and and an alchemic formula to try and regenerate some of the missing tissue" << endl;
-			for (int i = 0; i < 3; i++) { //Redacted Paragraph
-				for (int i = 0; i <= 10; i++) {
-					cout << " ";
-					int numb = rand() % 5 + 1;
-
-
-					for (int i = 0; i < numb; i++)
-						cout << char(178);
-				}
-				cout << endl;
-			}
-		}
-	}
-	
+void ServerSwitch() {
 	
 
-	Sleep(350);
-	cout << endl;
-	system("pause");
-	system("CLS");
-	cout << "Today marks your first day on the space mission" << endl;
-	cout << "The sensors say that the 3rd level of the office is the most stable for climbing aboard" << endl;
-	cout << "You can easily go through the emegancy excape pod chamber but you have to leave your main ship behind" << endl;
-	cout << "So much for your ride back home..." << endl;
-	system("pause");//stranded
+	
 }
