@@ -10,13 +10,14 @@ using namespace std; //Hacker Codes
 //Global Variables
 vector<string> inventory;
 
+//function declar
 void logo();
 void Inventory();
 
 int main() {
 
 	//Local Variables
-	int room = 1;
+	int room = 2;
 	int serverSwitch = 2;
 	int floor = 1;
 	string input;
@@ -24,9 +25,9 @@ int main() {
 	srand(time(NULL));
 
 
-	logo();
+	//logo();
 
-	cout << " Thank you for playing DogTooth" << endl;
+	/*cout << " Thank you for playing DogTooth" << endl;
 	cout << " ###############################" << endl;
 
 	cout << " Learn how to play? (y/n)" << endl;
@@ -176,30 +177,31 @@ int main() {
 	cout << " The sensors say that the 3rd level of the office is the most stable for climbing aboard" << endl;
 	cout << " You can easily go through the emegancy excape pod chamber but you have to leave your main ship behind" << endl;
 	cout << " So much for your ride back home..." << endl;
-	system("pause");//stranded
+	system("pause");//stranded*/
 
 
 	do { //-------------Game Loop -----------------
 		switch (room) {
 		case 1: //Living Room
+			system("CLS");
 			cout << " --DogTooth--" << endl;
 			cout << " ######################" << endl;
 			cout << endl;
 			cout << " A couch and an accent coffee table are flipped over and theres a futuristic tv that lights up the room with an EERIE blue light" << endl;
 			cout << " This is probably the living room" << endl;
 			cout << " Spiders are occupying the couch, looks like their favorite show is on...IDK" << endl;
+			//if you have Key it doesnt say they are in the envorment
 			if (find(inventory.begin(), inventory.end(), "Hexagon Keycard") != inventory.end())
 				cout << " Theres an empty coffee mug thats on the floor by the table" << endl;
 			else
 				cout << " Theres a Keycard inside a coffee mug thats on the floor by the table" << endl;
-
-			cout << endl;
+						cout << endl;
 			cout << " You can see a door to the East and to the North" << endl;
 
 
 			getline(cin, input);
 
-
+			//Add Key to inventory 
 			if (input == "Take Keycard") {
 				cout << " You shoved the keycard in your pocket";
 				inventory.insert(inventory.begin(), "Hexagon Keycard");
@@ -215,8 +217,8 @@ int main() {
 				room = 2;
 			else
 				cout << " You WHAT?";
+
 			system("PAUSE>nul");
-			system("CLS");
 			break;
 
 		case 2: //Kitchen
@@ -245,7 +247,9 @@ int main() {
 			else {
 				cout << " Im not sure you can go that way";
 			}
+
 			system("CLS");
+			system("PAUSE>nul");
 			break;
 
 		case 3: // Bathroom
@@ -257,6 +261,7 @@ int main() {
 			cout << " A shower and a sink take up most of the room" << endl;
 			cout << " Theres toilet! AND ITS USED" << endl;
 			cout << " The mirror has a brown hand print and smears" << endl;
+			//if you have pliers it doesnt say they are in the envorment
 			if (find(inventory.begin(), inventory.end(), "Pliers") != inventory.end())
 				cout << " The sink is stained grey and brown" << endl;
 			else
@@ -267,6 +272,7 @@ int main() {
 
 			getline(cin, input);
 
+			//add pliers to inventory
 			if (input == " Take Pliers") {
 				cout << " You grabbed the pliers";
 				inventory.insert(inventory.begin(), "Pliers");
@@ -281,7 +287,9 @@ int main() {
 				room = 2;
 			else
 				cout << " But nobody came...";
+
 			system("CLS");
+			system("PAUSE>nul");
 			break;
 
 		case 4: //Bedroom
@@ -300,6 +308,7 @@ int main() {
 			if (input == "Go East")
 				room = 3;
 			if (input == "Go West") {
+				//Checks if player has Keycard to acceces Hexagona stairway
 				if (find(inventory.begin(), inventory.end(), "Hexagon Keycard") != inventory.end()) {
 					cout << " You swipe the keycard and turn the terminal beeps";
 					room = 5;
@@ -314,6 +323,7 @@ int main() {
 			else
 				cout << "Error - 404";
 			system("CLS");
+			system("PAUSE>nul");
 			break;
 
 		case 5: //HexAgoty Stair-room TOP
@@ -359,9 +369,10 @@ int main() {
 				Inventory();
 			else
 				cout << " Yea, NO... ";
-			system("CLS");
-			break;
 
+			system("CLS");
+			system("PAUSE>nul");
+			break;
 
 		case 52: //HexAgoty Stair-room BOTTOM
 			cout << " --DogTooth--" << endl;
@@ -400,9 +411,10 @@ int main() {
 				room = 5;
 			else
 				cout << " Error - 404";
-			system("CLS");
-			break;
 
+			system("CLS");
+			system("PAUSE>nul");
+			break;
 
 		case 6: //hallway
 			cout << " --DogTooth--" << endl;
@@ -427,7 +439,9 @@ int main() {
 				room = 9;
 
 			system("CLS");
+			system("PAUSE>nul");
 			break;
+
 		case 7://server room
 			cout << " --DogTooth--" << endl;
 			cout << " ######################" << endl;
@@ -477,6 +491,7 @@ int main() {
 				cout << " Im not playing these games";
 
 			system("CLS");
+			system("PAUSE>nul");
 			break;
 
 		case 8://closet
@@ -495,13 +510,14 @@ int main() {
 				room = 6;
 
 			system("CLS");
+			system("PAUSE>nul");
 			break;
 
 		case 9://Office cubicals
 			cout << " --DogTooth--" << endl;
 			cout << " ######################" << endl;
 			cout << endl;
-			
+			cout << "" << endl;
 
 			if (input == "Go North")
 				room = 7;
@@ -511,9 +527,10 @@ int main() {
 				room = 6;
 
 			system("CLS");
+			system("PAUSE>nul");
 			break;
 
-		case 10:
+		case 10://Lab
 			cout << " --DogTooth--" << endl;
 			cout << " ######################" << endl;
 			cout << endl;
@@ -523,7 +540,7 @@ int main() {
 			system("CLS");
 			break;
 
-		case 11:
+		case 11://Square Stairs Top
 			cout << " --DogTooth--" << endl;
 			cout << " ######################" << endl;
 			cout << endl;
@@ -533,9 +550,10 @@ int main() {
 				room = 6;
 
 			system("CLS");
+			system("PAUSE>nul");
 			break;
 
-		case 112:
+		case 112://Square Stairs Bottom
 			cout << " --DogTooth--" << endl;
 			cout << " ######################" << endl;
 			cout << endl;
@@ -543,9 +561,10 @@ int main() {
 				room = 12;
 
 			system("CLS");
+			system("PAUSE>nul");
 			break;
 
-		case 12:
+		case 12://Hallway
 			cout << " --DogTooth--" << endl;
 			cout << " ######################" << endl;
 			cout << endl;
@@ -558,10 +577,11 @@ int main() {
 			if (input == "Go South")
 				
 			system("CLS");
+			system("PAUSE>nul");
 			break;
 
 
-		case 122:
+		case 122: //Hallway COnt.
 			cout << " --DogTooth--" << endl;
 			cout << " ######################" << endl;
 			cout << endl;
@@ -574,6 +594,7 @@ int main() {
 					room = 15;
 
 			system("CLS");
+			system("PAUSE>nul");
 			break;
 
 		case 13:
@@ -582,6 +603,7 @@ int main() {
 			cout << endl;
 
 			system("CLS");
+			system("PAUSE>nul");
 			break;
 
 		case 14:
@@ -590,6 +612,7 @@ int main() {
 			cout << endl;
 
 			system("CLS");
+			system("PAUSE>nul");
 			break;
 
 		case 15:
@@ -597,6 +620,7 @@ int main() {
 			cout << " #####################" << endl;
 			cout << endl;
 
+			system("PAUSE>nul");
 			system("CLS");
 			break;
 
@@ -606,6 +630,7 @@ int main() {
 			cout << endl;
 
 			system("CLS");
+			system("PAUSE>nul");
 			break;
 
 		case 17:
@@ -614,6 +639,7 @@ int main() {
 			cout << endl;
 
 			system("CLS");
+			system("PAUSE>nul");
 			break;
 
 		case 18:
@@ -622,6 +648,7 @@ int main() {
 			cout << endl;
 
 			system("CLS");
+			system("PAUSE>nul");
 			break;
 
 		case 19:
@@ -630,6 +657,7 @@ int main() {
 			cout << endl;
 
 			system("CLS");
+			system("PAUSE>nul");
 			break;
 
 		case 20:
@@ -638,6 +666,7 @@ int main() {
 			cout << endl;
 
 			system("CLS");
+			system("PAUSE>nul");
 			break;
 		}//End Switch
 
@@ -647,8 +676,8 @@ int main() {
 
 }
 
-
-void logo() { //Logo Defined
+//Logo function Defined
+void logo() { 
 	cout << "RESIZE SCREEN TO FIT LINE" << endl;
 	cout << "################################################################################################################################" << endl;
 	system("pause");
@@ -822,6 +851,7 @@ void logo() { //Logo Defined
 	system("CLS");
 }
 
+//Inventory function Defined
 void Inventory() {
 	system("CLS");
 	cout << " Currenly, you are holding: " << endl;
@@ -829,4 +859,5 @@ void Inventory() {
 		cout << " - " << inventory[i] << endl;
 	system("pause");
 }
+
 
