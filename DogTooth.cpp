@@ -1,4 +1,4 @@
-//My random Libraries
+/*---RANDOM LIBRARIES---*/
 #include<iostream>
 #include<Windows.h>
 #include<vector>
@@ -10,7 +10,7 @@ using namespace std; //Hacker Codes
 //Global Variables
 vector<string> inventory;
 
-//function declar
+/*---FUNCTION DECLARATIONS---*/
 void logo();
 void Inventory();
 
@@ -276,7 +276,7 @@ int main() {
 
 			//Add Key to inventory
 			if (input == "Take Keycard") {
-				cout << " You shoved the keycard in your pocket";
+				cout << " You shoved the keycard in your pocket" << char(031);
 				inventory.insert(inventory.begin(), "Hexagon Keycard");
 				system("PAUSE>nul");
 			}
@@ -323,7 +323,7 @@ int main() {
 			else if (input == "Go North")
 				room = 3;
 			else {
-				cout << " Im not sure you can go that way";
+				cout << " Im not sure you can go that way" << char(031);
 				system("PAUSE>nul");
 			}
 
@@ -358,7 +358,7 @@ int main() {
 
 			//add pliers to inventory
 			if (input == "Take Pliers") {
-				cout << " You grabbed the pliers";
+				cout << " You grabbed the pliers" << char(031);
 				inventory.insert(inventory.begin(), "Pliers");
 				system("PAUSE>nul");
 			}
@@ -401,12 +401,12 @@ int main() {
 			else if (input == "Go West") {
 				//Checks if player has Keycard to acceces Hexagona stairway
 				if (find(inventory.begin(), inventory.end(), "Hexagon Keycard") != inventory.end()) {
-					cout << " You swipe the keycard and turn the terminal beeps";
+					cout << " You swipe the keycard and turn the terminal beeps" << char(031);
 					system("PAUSE>nul");
 					room = 5;
 				}
 				else {
-					cout << "  Doesnt look like you have a key to open the door";
+					cout << "  Doesnt look like you have a key to open the door" << char(031);
 					system("PAUSE>nul");
 				}
 			}
@@ -414,7 +414,7 @@ int main() {
 			else if (input == "Inventory")
 				Inventory();
 			else {
-				cout << "Error - 404";
+				cout << "Error - 404" << char(031);
 				system("PAUSE>nul");
 			}
 
@@ -460,16 +460,16 @@ int main() {
 				cout << " Theres nothing that seems out of normal..." << endl;
 				cout << " Half way down the stair case, something grabs your ankle and pulls on your foot" << endl;
 				cout << " The floor seems to be getting closer to you face" << endl;
-				cout << " Your flashlight hits every step on the way down as your body follows its lead to the bottom" << endl;
+				cout << " Your flashlight hits every step on the way down as your body follows its lead to the bottom" << char(031) << endl;
 				system("PAUSE>nul");
 				room = 52;
 			}
 			else if (input == "Go East")
-				cout << " The door wont budge, not good" << endl;
+				cout << " The door wont budge, not good" << char(031) << endl;
 			else if (input == "Inventory")
 				Inventory();
 			else {
-				cout << " Yea, NO... ";
+				cout << " Yea, NO... " << char(031);
 				system("PAUSE>nul");
 			}
 
@@ -508,10 +508,10 @@ int main() {
 
 			if (input == "Look at Floor") {
 				cout << " You kneel down and use your hands to dig through the ash" << endl;
-				cout << " You pick one of the small hard pieces and shine your flashlight on it" << endl;
+				cout << " You pick one of the small hard pieces and shine your flashlight on it" << char(031) << endl;
 				PlaySoundA((LPCSTR)"Boom.wav", NULL, SND_FILENAME | SND_ASYNC);
 				cout << " IT'S A TOOTH" << endl;
-				cout << " You took a couple of teeth";
+				cout << " You took a couple of teeth" << char(031);
 				inventory.insert(inventory.begin(), "Teeth");
 				system("PAUSE>nul");
 			}
@@ -522,7 +522,7 @@ int main() {
 			else if (input == "Go Up")
 				room = 5;
 			else {
-				cout << " Error - 404";
+				cout << " Error - 404" << char(031);
 			}
 
 			system("CLS");
@@ -586,24 +586,24 @@ int main() {
 
 					if (input == "Up") {
 						serverSwitch = 1;
-						cout << " You move the switch Up";
+						cout << " You move the switch Up" << char(031);
 						system("PAUSE>nul");
 					}
 
 					else if (input == "Down") {
 						serverSwitch = 3;
-						cout << " You move the switch down";
+						cout << " You move the switch down" << char(031);
 						system("PAUSE>nul");
 					}
 
 				}
 				else if (serverSwitch == 1) {
-					cout << " You move the switch down";
+					cout << " You move the switch down" << char(031);
 					serverSwitch = 2;
 					system("PAUSE>nul");
 				}
 				else {
-					cout << " You move the switch Up";
+					cout << " You move the switch Up" << char(031);
 					system("PAUSE>nul");
 					serverSwitch = 2;
 				}
@@ -613,7 +613,7 @@ int main() {
 			else if (input == " Go South")
 				room = 9;
 			else {
-				cout << " Im not playing these games";
+				cout << " Im not playing these games" << char(031);
 			}
 
 
@@ -695,7 +695,8 @@ int main() {
 				cout << " -Beakers " << endl;
 				cout << " -Petri dishes " << endl;
 				cout << " -Graduated Cylinders " << endl;
-				cout << " -Test tubes " << endl;
+				cout << " -Test tubes " << char(031) << endl;
+				system("PAUSE>nul");
 			}
 			else if (input == "Go West")
 				room = 9;
@@ -709,15 +710,18 @@ int main() {
 			cout << " ######################" << endl;
 			cout << endl;
 
+			cout << " These stairs are less unsettling than the others" << endl;
+			cout << " Mostly industrial based, pipes, gears and metal" << endl;
 			cout << endl;
+			cout << " You can go Down" << endl;
+
 			cout << " ";
 			getline(cin, input);
 			cout << endl;
 
-			if (input == "Go Up")
+			if (input == "Go Down")
 				room = 112;
-			if (input == "Go South")
-				room = 6;
+			
 
 			system("CLS");
 
@@ -727,6 +731,16 @@ int main() {
 			cout << " --DogTooth--" << endl;
 			cout << " ######################" << endl;
 			cout << endl;
+
+			for (int i = 0; i < 3; i++) { //Redacted Paragraph
+				for (int i = 0; i <= 8; i++) {
+					cout << " ";
+					int numb = rand() % 5 + 1;
+					for (int i = 0; i < numb; i++)
+						cout << char(254);
+				}
+				cout << endl;
+			}
 
 			cout << endl;
 			cout << " ";
@@ -785,7 +799,7 @@ int main() {
 
 			break;
 
-		case 13:
+		case 13: // 
 			cout << " --DogTooth--" << endl;
 			cout << " ######################" << endl;
 			cout << endl;
@@ -901,8 +915,11 @@ int main() {
 
 	} while (input != "q");
 
+	cout << " Thank you playing the demo of 'DOG TOOTH' " << endl;
 
 }
+
+/*---FUNCTION DEFINITIONS---*/
 
 //Logo function Defined
 void logo() {
